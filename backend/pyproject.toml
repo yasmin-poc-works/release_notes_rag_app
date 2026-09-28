@@ -1,0 +1,21 @@
+[project]
+name = "release-notes-rag"
+version = "0.1.0"
+description = "Hybrid RAG chat API for release notes"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115.0",
+  "uvicorn[standard]>=0.30.0",
+  "python-dotenv>=1.0.1",
+  "pypdf>=5.0.0",
+  "scikit-learn>=1.5.0",
+  "qdrant-client>=1.12.0",
+  "sentence-transformers>=3.0.0",
+  "groq>=0.11.0",
+]
+
+[dependency-groups]
+dev = ["pytest>=8.3.0", "httpx>=0.27.0"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
